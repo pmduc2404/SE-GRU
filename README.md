@@ -35,9 +35,8 @@ python3 scripts/evaluate.py --model_path sarima_gru_model.pth --data_path DataSe
 │   ├── train.py
 │   ├── test.py
 │   └── evaluate.py
-├── DataSet/                 # Data
-├── models/                  # Saved models
-└── results/                 # Results
+├── dataset/                 # Data
+
 ```
 
 ## 💻 Usage
