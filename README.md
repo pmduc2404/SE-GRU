@@ -29,33 +29,6 @@ python3 scripts/train.py --num_epochs 100 --batch_size 32
 
 ```
 
-## 💻 Usage
-
-### Training
-```python
-from sarima_gru import SARIMAGRU, prepare_data, train_model
-from torch.utils.data import DataLoader
-
-train_data, test_data, scalers = prepare_data('DataSet/AnKhe.csv')
-model = SARIMAGRU(input_size=10, hidden_size=64, num_layers=3)
-
-train_loader = DataLoader(train_data, batch_size=32)
-test_loader = DataLoader(test_data, batch_size=32)
-results = train_model(model, train_loader, test_loader, num_epochs=100)
-```
-
-### Prediction
-```python
-import torch
-checkpoint = torch.load('sarima_gru_model.pth')
-model = SARIMAGRU(**checkpoint['model_config'])
-model.load_state_dict(checkpoint['model_state_dict'])
-model.eval()
-
-with torch.no_grad():
-    output, _ = model(input_data)
-```
-
 ## 📊 Data Format
 
 CSV: `Time, Target, Feature1, Feature2, ...`
