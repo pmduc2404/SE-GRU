@@ -29,15 +29,6 @@ python3 scripts/train.py --num_epochs 100 --batch_size 32
 
 ```
 
-## 📊 Data Format
-
-CSV: `Time, Target, Feature1, Feature2, ...`
-
-```csv
-Time,Lake water level (m),Outflow,Inflow
-2019-01-01 00:00:00,15.2,25.3,10.5
-```
-
 ## 📬 Data Availability
 
 The dataset used in this study is not publicly available due to data-sharing restrictions.
